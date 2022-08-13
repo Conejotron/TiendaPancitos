@@ -1,16 +1,51 @@
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import React from "react";
+import {
+  CategoriesScreen,
+  ProductScreen,
+  ProductsScreen,
+} from "../screens/index";
 
-import { CategoriesScreen, ProductScreen, ProductsScreen } from "../screens/index";
+import React from "react";
+import { colors } from "../constants/colors";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { isIOS } from "../utils/functions";
 
 const Stack = createNativeStackNavigator();
 
 const ShopNavigator = () => {
   return (
-    <Stack.Navigator initialRouteName="Categories">
-      <Stack.Screen name="Categories" component={CategoriesScreen} />
-      <Stack.Screen name="Products" component={ProductsScreen} />
-      <Stack.Screen name="Product" component={ProductScreen} />
+    <Stack.Navigator
+      initialRouteName="Categories"
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: isIOS ? colors.primary : colors.secondary,
+        },
+        headerTintColor: isIOS ? colors.text : colors.textLight,
+        headerTitleStyle: {
+          fontFamily: "Lato-Bold",
+        },
+      }}
+    >
+      <Stack.Screen
+        name="Categories"
+        component={CategoriesScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="Products"
+        component={ProductsScreen}
+        options={({ route }) => ({
+          headerTitle: route.params.name,
+        })}
+      />
+      <Stack.Screen
+        name="Product"
+        component={ProductScreen}
+        options={({ route }) => ({
+          headerTitle: route.params.name,
+        })}
+      />
     </Stack.Navigator>
   );
 };

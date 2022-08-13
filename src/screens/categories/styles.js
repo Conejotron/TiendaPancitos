@@ -1,10 +1,11 @@
-import { StyleSheet } from "react-native";
+import { StatusBar, StyleSheet } from "react-native";
+
+import { isAndroid } from "../../utils/functions";
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    justifyContent: "center",
-    alignItems: "center",
+    marginTop: isAndroid ? StatusBar.currentHeight : 0,
   },
 });
