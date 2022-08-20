@@ -1,8 +1,4 @@
-import {
-  CategoriesScreen,
-  ProductScreen,
-  ProductsScreen,
-} from "../screens/index";
+import { CategoriesScreen, ProductScreen, ProductsScreen } from "../screens/index";
 
 import React from "react";
 import { colors } from "../constants/colors";
@@ -23,8 +19,7 @@ const ShopNavigator = () => {
         headerTitleStyle: {
           fontFamily: "Lato-Bold",
         },
-      }}
-    >
+      }}>
       <Stack.Screen
         name="Categories"
         component={CategoriesScreen}
