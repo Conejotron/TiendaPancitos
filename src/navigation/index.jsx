@@ -1,11 +1,14 @@
+import React, { useState } from "react";
+
+import { AuthScreen } from "../screens";
 import { NavigationContainer } from "@react-navigation/native";
-import React from "react";
 import Tabs from "./tabs";
 
 const AppNavigator = () => {
+  const [userId, setUserId] = useState(null);
   return (
     <NavigationContainer>
-      <Tabs />
+      {userId ? <Tabs /> : <AuthScreen setUserId={setUserId} />}
     </NavigationContainer>
   );
 };
