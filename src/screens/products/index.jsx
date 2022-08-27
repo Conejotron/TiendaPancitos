@@ -11,10 +11,11 @@ const Products = ({ navigation }) => {
   const categorySelected = useSelector((state) => state.category.selected);
   const products = useSelector((state) => state.products.filteredProducts);
   const onSelected = (item) => {
-    dispatch(selectProduct(item.id));
+    /* dispatch(selectProduct(item.id));
     navigation.navigate("Product", {
       name: item.name,
-    });
+    }); */
+    console.log(item);
   };
 
   useEffect(() => {
