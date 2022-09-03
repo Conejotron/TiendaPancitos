@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { colors } from "../../constants/colors";
 
 export const styles = StyleSheet.create({
   containerKeyboard: {
@@ -7,6 +8,44 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
   container: {
-    flex: 1,
+    width: "80%",
+    maxWidth: 400,
+    padding: 15,
+    margin: 15,
+    borderColor: colors.primary,
+    borderWidth: 1,
+    borderRadius: 10,
+    backgroundColor: colors.white,
   },
+  title: {
+    fontSize: 18,
+    fontFamily: "Lato-Regular",
+    marginBottom: 15,
+    textAlign: "center",
+  },
+  label: {
+    fontSize: 14,
+    fontFamily: "Lato-Regular",
+    marginVertical: 5,
+  },
+  input: {
+    height: 45,
+    borderBottomColor: colors.primary,
+    borderBottomWidth: 1,
+    width: "90%",
+    fontFamily: "Lato-Regular",
+    marginBottom: 10,
+  },
+  prompt: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  promptMessage: {
+    fontSize: 14,
+    fontFamily: "Lato-Bold",
+    color: colors.text,
+    marginRight: 15,
+  },
+  promptButton: {},
 });
