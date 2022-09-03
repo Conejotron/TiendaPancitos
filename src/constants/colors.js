@@ -9,4 +9,5 @@ export const colors = {
   black: "#000000",
   gray: "#f5f5f5",
   placerholder: "#a0a0a0",
+  error: "#ff0000",
 };

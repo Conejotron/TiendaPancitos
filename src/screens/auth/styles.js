@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+
 import { colors } from "../../constants/colors";
 
 export const styles = StyleSheet.create({
@@ -9,6 +10,7 @@ export const styles = StyleSheet.create({
   },
   container: {
     width: "80%",
+    height: 340,
     maxWidth: 400,
     padding: 15,
     margin: 15,
@@ -27,14 +29,6 @@ export const styles = StyleSheet.create({
     fontSize: 14,
     fontFamily: "Lato-Regular",
     marginVertical: 5,
-  },
-  input: {
-    height: 45,
-    borderBottomColor: colors.primary,
-    borderBottomWidth: 1,
-    width: "90%",
-    fontFamily: "Lato-Regular",
-    marginBottom: 10,
   },
   prompt: {
     flexDirection: "row",
