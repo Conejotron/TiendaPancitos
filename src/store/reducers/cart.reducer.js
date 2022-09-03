@@ -1,5 +1,4 @@
 /* eslint-disable no-case-declarations */
-
 import { cartTypes } from "../types";
 
 const { ADD_ITEM, REMOVE_ITEM, CONFIRM_CART } = cartTypes;
